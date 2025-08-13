@@ -14,9 +14,9 @@ CSS and JavaScript files are processed and minified for use in production. The s
 You must install a few command line packages to run the build process:
 
 1. Install [Node](https://nodejs.org/en) if you don't currently have it.
-    - This will install both Node and the Node Package Manager (npm).
+    -   This will install both Node and the Node Package Manager (npm).
 2. Install [Sass](https://sass-lang.com/install/).
-    - If you use [Homebrew](https:/brew.sh/), you can install Dart Sass with the `brew install sass/sass/sass` command. Otherwise, the recommended package is [Sass Embedded](https://www.npmjs.com/package/sass-embedded) using the per-project `npm i sass-embedded` or the global `npm i -g sass-embedded` installation command.
+    -   If you use [Homebrew](https:/brew.sh/), you can install Dart Sass with the `brew install sass/sass/sass` command. Otherwise, the recommended package is [Sass Embedded](https://www.npmjs.com/package/sass-embedded) using the per-project `npm i sass-embedded` or the global `npm i -g sass-embedded` installation command.
 3. In the command line, go to the theme's root `/wp-custom-block-theme/` directory and run `npm install`. This will install the `/node_modules/` directory with the build process packages and dependencies from the `package.json` file.
 
 You should now be able to run the build process scripts. In the command line, go to the theme's root `/wp-custom-block-theme/` directory and enter `npm run build`. This will run the CSS, JS, and SCSS (Sass) build processes one after the next.

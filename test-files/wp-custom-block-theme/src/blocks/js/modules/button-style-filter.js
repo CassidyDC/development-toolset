@@ -58,9 +58,7 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 		const hasCurrentColor = className.match( colorClassRegex );
 		const currentColorName = hasCurrentColor ? hasCurrentColor[ 1 ] : '';
 		const [ colorState, setColor ] = useState(
-			currentColorName
-				? `var(--wp--preset--color--${ currentColorName })`
-				: 'var(--wp--preset--color--primary)'
+			currentColorName ? `var(--wp--preset--color--${ currentColorName })` : 'var(--wp--preset--color--primary)'
 		);
 		const colorOptions = [
 			{
@@ -85,10 +83,7 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 			<Fragment>
 				<BlockEdit { ...props } />
 				<InspectorControls group="styles">
-					<PanelBody
-						title={ __( 'Color', 'wp-custom-block-theme' ) }
-						initialOpen={ true }
-					>
+					<PanelBody title={ __( 'Color', 'wp-custom-block-theme' ) } initialOpen={ true }>
 						<ColorPalette
 							clearable={ false }
 							disableCustomColors
@@ -151,8 +146,4 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 	};
 }, 'withInspectorControl' );
 
-addFilter(
-	'editor.BlockEdit',
-	'wp-custom-block-theme/button-block/add-inspector-controls',
-	withInspectorControl
-);
+addFilter( 'editor.BlockEdit', 'wp-custom-block-theme/button-block/add-inspector-controls', withInspectorControl );

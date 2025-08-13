@@ -52,21 +52,15 @@
 	}
 
 	&.is-full-height-first {
-		min-block-size: calc(
-			100vb - var(--site-header--height, 144px) - var(--wp-admin--admin-bar--height, 0px)
-		) !important;
+		min-block-size: calc(100vb - var(--site-header--height, 144px) - var(--wp-admin--admin-bar--height, 0px)) !important;
 
 		@media (width <= calc( (1139 / 16) * 1rem )) {
-			min-block-size: calc(
-				100vb - var(--site-header--height, 100px) - var(--wp-admin--admin-bar--height, 0px)
-			) !important;
+			min-block-size: calc(100vb - var(--site-header--height, 100px) - var(--wp-admin--admin-bar--height, 0px)) !important;
 		}
 	}
 
 	&.is-full-height {
-		min-block-size: calc(
-			100vb - var(--sticky-header--height, 0px) - var(--wp-admin--admin-bar--height, 0px)
-		) !important;
+		min-block-size: calc(100vb - var(--sticky-header--height, 0px) - var(--wp-admin--admin-bar--height, 0px)) !important;
 
 		@media (width <= 600px) {
 			min-block-size: 100vb !important;

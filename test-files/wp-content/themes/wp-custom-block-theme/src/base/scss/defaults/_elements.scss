@@ -16,10 +16,7 @@ html:focus-within {
 html {
 	// Scroll offset
 	@media screen and (width >= calc( (1280 / 16) * 1rem)) {
-		scroll-padding-block-start: calc(
-			var(--wp-admin--admin-bar--height, 0px) + var(--sticky-header--height, 144px) +
-				var(--wp--custom--element-spacing, 24px)
-		);
+		scroll-padding-block-start: calc(var(--wp-admin--admin-bar--height, 0px) + var(--sticky-header--height, 144px) + var(--wp--custom--element-spacing, 24px));
 	}
 
 	// Scroll offset when WP Admin Bar has a static position

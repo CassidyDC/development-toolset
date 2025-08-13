@@ -43,16 +43,14 @@ body {
 	// --filter-tertiary-medium: invert(42%) sepia(19%) saturate(966%)
 	//   hue-rotate(54deg) brightness(91%) contrast(88%);
 
-	--filter-yellow-icon: brightness(0) saturate(100%) invert(79%) sepia(28%) saturate(406%) hue-rotate(5deg)
-		brightness(82%) contrast(82%);
+	--filter-yellow-icon: brightness(0) saturate(100%) invert(79%) sepia(28%) saturate(406%) hue-rotate(5deg) brightness(82%) contrast(82%);
 
 	// Gray filters
 	--filter-gray-dark: invert(0%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(20%) contrast(100%);
 
 	// --filter-gray-medium: invert(0%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(35%) contrast(100%);
 
-	--filter-primary-white: brightness(0) saturate(100%) invert(89%) sepia(2%) saturate(1771%) hue-rotate(198deg)
-		brightness(102%) contrast(89%);
+	--filter-primary-white: brightness(0) saturate(100%) invert(89%) sepia(2%) saturate(1771%) hue-rotate(198deg) brightness(102%) contrast(89%);
 }
 
 // -----------------------------------------------

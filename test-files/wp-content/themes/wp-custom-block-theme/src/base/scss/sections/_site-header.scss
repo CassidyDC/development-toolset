@@ -228,12 +228,7 @@
 			flex-direction: column-reverse;
 			gap: calc(var(--wp--custom--site-spacing));
 
-			:where(
-					.wp-block-navigation,
-					.wp-block-navigation-item,
-					.wp-block-navigation-item__content,
-					.wp-block-navigation__submenu-container
-				) {
+			:where(.wp-block-navigation, .wp-block-navigation-item, .wp-block-navigation-item__content, .wp-block-navigation__submenu-container) {
 				inline-size: 100%;
 			}
 

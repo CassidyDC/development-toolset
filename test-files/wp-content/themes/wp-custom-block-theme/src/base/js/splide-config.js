@@ -1,6 +1,8 @@
 'use strict';
 
-document.addEventListener( 'DOMContentLoaded', runSplideConfig, { once: true } );
+document.addEventListener( 'DOMContentLoaded', runSplideConfig, {
+	once: true,
+} );
 
 function runSplideConfig() {
 	const splideLists = document.querySelectorAll( '.splide__list' );

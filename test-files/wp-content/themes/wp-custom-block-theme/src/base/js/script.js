@@ -18,10 +18,18 @@ function modifyHeaderMenu() {
 	const siteHeader = document.querySelector( '.site-header' );
 	const headerContainer = document.querySelector( '.header-container' );
 	const headerTopbar = document.querySelector( '.header-topbar' );
-	const headerContainerInner = document.querySelector( '.header-container__inner' );
-	const headerLogoContainer = document.querySelector( '.header-logo-container' );
-	const headerMenuContainer = document.querySelector( '.header-menu-container' );
-	const headerContainerInnerResizeObserver = new ResizeObserver( onHeaderContainerInnerResize );
+	const headerContainerInner = document.querySelector(
+		'.header-container__inner'
+	);
+	const headerLogoContainer = document.querySelector(
+		'.header-logo-container'
+	);
+	const headerMenuContainer = document.querySelector(
+		'.header-menu-container'
+	);
+	const headerContainerInnerResizeObserver = new ResizeObserver(
+		onHeaderContainerInnerResize
+	);
 	const mobileMenuButtons = document.querySelectorAll( '.header-menu-btn' );
 	let userFontSizeRatio = getUserBrowserFontSizeSetting();
 	let desktopHeightsTimeoutID;
@@ -85,13 +93,18 @@ function modifyHeaderMenu() {
 	}
 	function moveElementsForDesktop() {
 		// Move .header-logo-container back inside .header-container__inner
-		headerContainerInner.insertBefore( headerLogoContainer, headerMenuContainer );
+		headerContainerInner.insertBefore(
+			headerLogoContainer,
+			headerMenuContainer
+		);
 	}
 
 	function toggleMobileMenu() {
 		siteWrapper.classList.toggle( 'show-nav' );
 		siteCanvas.classList.toggle( 'active' );
-		mobileMenuButtons.forEach( ( button ) => button.classList.toggle( 'active' ) );
+		mobileMenuButtons.forEach( ( button ) =>
+			button.classList.toggle( 'active' )
+		);
 	}
 
 	function closeMobileMenuOnEsc( e ) {
@@ -103,7 +116,9 @@ function modifyHeaderMenu() {
 	function closeMobileMenu() {
 		siteWrapper.classList.remove( 'show-nav' );
 		siteCanvas.classList.remove( 'active' );
-		mobileMenuButtons.forEach( ( button ) => button.classList.remove( 'active' ) );
+		mobileMenuButtons.forEach( ( button ) =>
+			button.classList.remove( 'active' )
+		);
 	}
 
 	function addMobileEventListeners() {
@@ -154,11 +169,15 @@ function getStickyHeaderHeight() {
 	if ( document.readyState === 'complete' ) {
 		setStickyHeaderHeight();
 	} else {
-		window.addEventListener( 'load', setStickyHeaderHeight, { once: true } );
+		window.addEventListener( 'load', setStickyHeaderHeight, {
+			once: true,
+		} );
 	}
 
 	function setStickyHeaderHeight() {
-		const stickyHeader = document.querySelector( '.header-container__inner' );
+		const stickyHeader = document.querySelector(
+			'.header-container__inner'
+		);
 		const stickyHeaderHeight = stickyHeader.offsetHeight;
 		let stickyCSS = document.querySelector( '.sticky-css' );
 		if ( stickyCSS ) {
@@ -238,7 +257,9 @@ function updateFullHeightSize() {
 		if ( document.readyState === 'complete' ) {
 			setFullHeightOffset();
 		} else {
-			window.addEventListener( 'load', setFullHeightOffset, { once: true } );
+			window.addEventListener( 'load', setFullHeightOffset, {
+				once: true,
+			} );
 		}
 	}
 
@@ -258,7 +279,9 @@ function updateFullHeightSize() {
 		}
 
 		// Add script with full-height offset css variables
-		let fullHeightOffsetCSS = document.querySelector( '.site-header-offset-css' );
+		let fullHeightOffsetCSS = document.querySelector(
+			'.site-header-offset-css'
+		);
 		if ( fullHeightOffsetCSS ) {
 			fullHeightOffsetCSS.innerHTML = `html { --site-header--height: ${ offsetHeight }px; }`;
 		} else {
@@ -316,8 +339,12 @@ function printYears() {
 // SET HEIGHT OF ARTICLE BOX HEADER (FOR HOMEPAGE RECENT ARTICLES)
 //----------------------------------------------------------------
 function setArticleBoxHeight() {
-	const articleBoxHeaders = document.querySelectorAll( '.article-box__header' );
-	const articleBoxWidthObserver = new ResizeObserver( updateArticleBoxHeight );
+	const articleBoxHeaders = document.querySelectorAll(
+		'.article-box__header'
+	);
+	const articleBoxWidthObserver = new ResizeObserver(
+		updateArticleBoxHeight
+	);
 
 	if ( articleBoxHeaders.length > 0 ) {
 		articleBoxWidthObserver.observe( articleBoxHeaders[ 0 ] );

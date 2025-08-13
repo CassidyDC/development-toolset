@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Subtitle",
+	"slug": "subtitle",
+	"blockTypes": [ "core/paragraph" ],
+	"styles": {
+		"css": "text-wrap:balance;",
+		"typography": {
+			"fontSize": "var:preset|font-size|x-large",
+			"fontWeight": "500",
+			"lineHeight": "var:custom|line-height|x-large"
+		}
+	}
+}

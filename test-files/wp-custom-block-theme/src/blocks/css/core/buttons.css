@@ -96,9 +96,7 @@
 				}
 
 				&:active {
-					background-color: var(
-						--wp--preset--color--secondary-extra-light
-					);
+					background-color: var(--wp--preset--color--secondary-extra-light);
 				}
 			}
 
@@ -122,15 +120,12 @@
 				}
 
 				&:active {
-					background-color: var(
-						--wp--preset--color--tertiary-extra-light
-					);
+					background-color: var(--wp--preset--color--tertiary-extra-light);
 				}
 			}
 
 			/* OUTLINE-STYLE COLORS */
-			:where(
-					.is-style-outline:not([class*="is-color-"], .is-color-primary)) & {
+			:where(.is-style-outline:not([class*="is-color-"], .is-color-primary)) & {
 				border-color: var(--wp--preset--color--primary);
 				color: var(--wp--preset--color--primary);
 
@@ -161,9 +156,7 @@
 					}
 
 					&:active {
-						background-color: var(
-							--wp--preset--color--secondary-light
-						);
+						background-color: var(--wp--preset--color--secondary-light);
 						border-color: var(--wp--preset--color--secondary-light);
 					}
 				}
@@ -189,9 +182,7 @@
 					}
 
 					&:active {
-						background-color: var(
-							--wp--preset--color--tertiary-light
-						);
+						background-color: var(--wp--preset--color--tertiary-light);
 						border-color: var(--wp--preset--color--tertiary-light);
 					}
 				}

@@ -36,11 +36,7 @@ function addAttributes( settings, name ) {
 	return settings;
 }
 
-addFilter(
-	'blocks.registerBlockType',
-	'wp-custom-block-theme/add-attributes',
-	addAttributes
-);
+addFilter( 'blocks.registerBlockType', 'wp-custom-block-theme/add-attributes', addAttributes );
 
 // -----------------------------------------------------
 // Add new attributes editor control to the Button block
@@ -101,24 +97,13 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 							onChange={ ( color ) => {
 								const colorName = color
 									? colorOptions
-											.find(
-												( colorOption ) =>
-													colorOption.color === color
-											)
+											.find( ( colorOption ) => colorOption.color === color )
 											.name.toLowerCase()
 									: '';
-								const colorClass = colorName
-									? `is-color-${ colorName }`
-									: '';
-								const hasPreviousColorClass =
-									colorClassRegex.test( className );
+								const colorClass = colorName ? `is-color-${ colorName }` : '';
+								const hasPreviousColorClass = colorClassRegex.test( className );
 								const classList = hasPreviousColorClass
-									? className
-											.replace(
-												colorClassRegex,
-												colorClass
-											)
-											.trim()
+									? className.replace( colorClassRegex, colorClass ).trim()
 									: `${ className } ${ colorClass }`.trim();
 
 								setColor( color );
@@ -131,34 +116,20 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 						/>
 					</PanelBody>
 
-					<PanelBody
-						title={ __( 'Size', 'wp-custom-block-theme' ) }
-						initialOpen={ true }
-					>
+					<PanelBody title={ __( 'Size', 'wp-custom-block-theme' ) } initialOpen={ true }>
 						<ToggleGroupControl
 							value={ buttonSize || 'medium' }
-							label={ __(
-								'Button Size',
-								'wp-custom-block-theme'
-							) }
+							label={ __( 'Button Size', 'wp-custom-block-theme' ) }
 							hideLabelFromVision
 							isDeselectable
 							isBlock
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
 							onChange={ ( value ) => {
-								const sizeClass = value
-									? `is-size-${ value }`
-									: '';
-								const hasPreviousSizeClass =
-									sizeClassRegex.test( className );
+								const sizeClass = value ? `is-size-${ value }` : '';
+								const hasPreviousSizeClass = sizeClassRegex.test( className );
 								const classList = hasPreviousSizeClass
-									? className
-											.replace(
-												sizeClassRegex,
-												sizeClass
-											)
-											.trim()
+									? className.replace( sizeClassRegex, sizeClass ).trim()
 									: `${ className } ${ sizeClass }`.trim();
 
 								setAttributes( {
@@ -167,26 +138,11 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 								} );
 							} }
 						>
-							<ToggleGroupControlOption
-								value="x-small"
-								label={ __( 'XS' ) }
-							/>
-							<ToggleGroupControlOption
-								value="small"
-								label={ __( 'S' ) }
-							/>
-							<ToggleGroupControlOption
-								value="medium"
-								label={ __( 'M' ) }
-							/>
-							<ToggleGroupControlOption
-								value="large"
-								label={ __( 'L' ) }
-							/>
-							<ToggleGroupControlOption
-								value="x-large"
-								label={ __( 'XL' ) }
-							/>
+							<ToggleGroupControlOption value="x-small" label={ __( 'XS' ) } />
+							<ToggleGroupControlOption value="small" label={ __( 'S' ) } />
+							<ToggleGroupControlOption value="medium" label={ __( 'M' ) } />
+							<ToggleGroupControlOption value="large" label={ __( 'L' ) } />
+							<ToggleGroupControlOption value="x-large" label={ __( 'XL' ) } />
 						</ToggleGroupControl>
 					</PanelBody>
 				</InspectorControls>

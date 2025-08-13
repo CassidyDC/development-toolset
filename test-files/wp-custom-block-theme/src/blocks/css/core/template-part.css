@@ -86,7 +86,8 @@
 			}
 
 			.footer-company-info__grid {
-				gap: calc(var(--wp--custom--element-spacing) * 3) calc(var(--wp--custom--element-spacing) * 2);
+				gap: calc(var(--wp--custom--element-spacing) * 3)
+					calc(var(--wp--custom--element-spacing) * 2);
 
 				> * {
 					max-inline-size: 26.25rem;

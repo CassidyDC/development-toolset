@@ -9,7 +9,7 @@
 
 		tr {
 			&:where(:nth-child(even)) {
-				background-color: rgba(0, 0, 0, 0.025);
+				background-color: rgb(0 0 0 / 2.5%);
 			}
 		}
 

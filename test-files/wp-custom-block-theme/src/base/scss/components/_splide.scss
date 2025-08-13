@@ -2,9 +2,9 @@
  * SPLIDE
  */
 
-//-----------------------------------------------
+// -----------------------------------------------
 // SPLIDE: DEFAULT STYLES
-//-----------------------------------------------
+// -----------------------------------------------
 // SPLIDE
 .splide {
 	position: relative;
@@ -15,6 +15,7 @@
 .splide__list {
 	display: flex;
 	block-size: 100%;
+
 	// SPLIDE__SLIDE
 	> li {
 		position: relative;
@@ -24,7 +25,7 @@
 		padding: 0 var(--wp--custom--element-spacing);
 		text-align: justify;
 
-		@media (max-width: calc( (767.9 / 16) * 1rem )) {
+		@media (width <= calc( (767.9 / 16) * 1rem )) {
 			text-align: start;
 		}
 	}

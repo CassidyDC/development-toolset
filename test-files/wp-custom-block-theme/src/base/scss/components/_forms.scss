@@ -2,9 +2,9 @@
  * FORMS
  */
 
-//-----------------------------------------------
+// -----------------------------------------------
 // FORMS: DEFAULTS
-//-----------------------------------------------
+// -----------------------------------------------
 input,
 select,
 textarea {
@@ -60,9 +60,9 @@ fieldset {
 	padding: 0;
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // FORMS: SELECT ARROW
-//-----------------------------------------------
+// -----------------------------------------------
 select:not([multiple="multiple"]) {
 	appearance: none;
 	background-image: linear-gradient(45deg, transparent 50%, var(--wp--preset--color--gray-light) 50%),
@@ -80,9 +80,9 @@ select:not([multiple="multiple"]) {
 	padding-inline-end: 2.5rem;
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // FORMS: GRAVITY FORMS
-//-----------------------------------------------
+// -----------------------------------------------
 
 /* stylelint-disable selector-class-pattern -- Gravity Forms doesn't follow BEM */
 .gform_wrapper {
@@ -156,7 +156,7 @@ select:not([multiple="multiple"]) {
 	grid-column: span 6;
 }
 
-.ginput_container_address:where(.has_state):not(.has_city):not(.has_zip) {
+.ginput_container_address:where(.has_state):not(.has_city, .has_zip) {
 	gap: 0;
 }
 
@@ -178,6 +178,7 @@ select:not([multiple="multiple"]) {
 	border-radius: var(--wp--custom--default-border-radius);
 	margin-block-end: 0.5rem;
 	padding: 2rem;
+
 	// background-color: hsla(0, 0%, 0%, 0.02);
 	text-align: center;
 }
@@ -224,9 +225,9 @@ select:not([multiple="multiple"]) {
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // FORMS: IN PRIMARY BACKGROUND
-//-----------------------------------------------
+// -----------------------------------------------
 .has-primary-background-color {
 	::placeholder {
 		color: var(--wp--preset--color--white);
@@ -300,10 +301,10 @@ select:not([multiple="multiple"]) {
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // FORMS: MEDIA BREAKPOINTS
-//-----------------------------------------------
-@media only screen and (max-width: calc((768 / 16) * 1rem)) {
+// -----------------------------------------------
+@media only screen and (width <= calc((768 / 16) * 1rem)) {
 	.ginput_complex {
 		fieldset,
 		span {

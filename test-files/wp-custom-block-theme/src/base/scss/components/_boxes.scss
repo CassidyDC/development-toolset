@@ -2,9 +2,9 @@
  * BOXES
  */
 
-//-----------------------------------------------
+// -----------------------------------------------
 // ICON BOX
-//-----------------------------------------------
+// -----------------------------------------------
 // example: used in single state page sidebar box.
 .is-icon-box {
 	flex-direction: row;
@@ -23,9 +23,9 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // CONTACT BOX
-//-----------------------------------------------
+// -----------------------------------------------
 .is-contact-box {
 	.wp-block-button {
 		flex-grow: 1;
@@ -40,9 +40,9 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // INDEX BOX
-//-----------------------------------------------
+// -----------------------------------------------
 .is-index-box {
 	padding: calc(var(--wp--custom--element-spacing) * 2) var(--wp--custom--site-spacing);
 
@@ -70,9 +70,9 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // EVENT BOX
-//-----------------------------------------------
+// -----------------------------------------------
 .is-event-box {
 	flex-direction: row;
 	gap: var(--wp--custom--element-spacing);
@@ -109,14 +109,14 @@
 		flex-basis: 20%;
 	}
 
-	@media screen and (max-width: calc( (400 / 16) * 1rem )) {
+	@media screen and (width <= calc( (400 / 16) * 1rem )) {
 		flex-direction: column;
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // BOXES: DEFAULTS
-//-----------------------------------------------
+// -----------------------------------------------
 .box {
 	display: flex;
 	flex-direction: column;
@@ -137,7 +137,7 @@
 	.wp-block-buttons {
 		.wp-block-button {
 			&.wp-block-button__width-50 {
-				@media screen and (max-width: calc( (920 / 16) * 1rem)) {
+				@media screen and (width <= calc( (920 / 16) * 1rem)) {
 					inline-size: 100%;
 				}
 			}
@@ -164,7 +164,7 @@
 			inline-size: 48px;
 		}
 
-		@media screen and (max-width: calc( (1139 / 16) * 1rem)) {
+		@media screen and (width <= calc( (1139 / 16) * 1rem)) {
 			flex-direction: column;
 			text-align: center;
 
@@ -204,15 +204,15 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // ALERT BOX
-//-----------------------------------------------
+// -----------------------------------------------
 .is-alert-box {
 	flex-direction: row;
 	justify-content: start;
 	gap: var(--wp--custom--element-spacing);
 	background-color: var(--wp--preset--color--yellow-white);
-	border: 2px solid hsla(43, 90%, 20%, 30%);
+	border: 2px solid hsl(43deg 90% 20% / 30%);
 	padding: var(--wp--custom--element-spacing);
 
 	p,
@@ -244,9 +244,9 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // ARTICLE BOX
-//-----------------------------------------------
+// -----------------------------------------------
 .has-article-boxes {
 	&.grid-container-4 {
 		row-gap: calc(var(--wp--custom--element-spacing) * 3);
@@ -288,25 +288,25 @@
 			flex-basis: 100%;
 			align-items: center;
 			justify-content: center;
-			background-color: hsla(var(--h-primary), var(--s-primary), var(--l-primary), 0.6);
+			background-color: hsl(var(--h-primary) var(--s-primary) var(--l-primary) / 60%);
 			padding: var(--wp--custom--element-spacing);
 
 			&:hover {
-				background-color: hsla(var(--h-primary), var(--s-primary), var(--l-primary), 0.8);
+				background-color: hsl(var(--h-primary) var(--s-primary) var(--l-primary) / 80%);
 			}
 		}
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // CITY BOX
-//-----------------------------------------------
+// -----------------------------------------------
 .is-city-box {
 	.box__icon-heading {
 		justify-content: center;
 		padding-block-end: 16px;
 
-		@media screen and (max-width: calc( (1139 / 16) * 1rem)) {
+		@media screen and (width <= calc( (1139 / 16) * 1rem)) {
 			flex-direction: row;
 
 			figure {
@@ -316,18 +316,18 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // PRODUCT BOX
-//-----------------------------------------------
+// -----------------------------------------------
 .has-product-boxes {
 	.box {
 		border: 0.125rem solid var(--wp--preset--color--gray-white);
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // SQUARE BOX
-//-----------------------------------------------
+// -----------------------------------------------
 .square-boxes:is(.wp-block-group) {
 	display: flex;
 	flex-wrap: wrap;
@@ -346,7 +346,7 @@
 			margin-inline: auto;
 		}
 
-		@media (min-width: 1440px) {
+		@media (width >= 1440px) {
 			min-block-size: 720px;
 		}
 	}
@@ -363,14 +363,14 @@
 		padding: calc(var(--wp--custom--element-spacing) * 4) var(--wp--custom--site-spacing);
 	}
 
-	@media screen and (max-width: calc( (960 / 16) * 1rem)) {
+	@media screen and (width <= calc( (960 / 16) * 1rem)) {
 		p {
 			font-size: var(--wp--preset--font-size--medium) !important;
 			line-height: var(--wp--custom--line-height--medium);
 		}
 	}
 
-	@media screen and (max-width: calc( (768 / 16) * 1rem)) {
+	@media screen and (width <= calc( (768 / 16) * 1rem)) {
 		flex-direction: column;
 
 		.square-box__image {
@@ -388,9 +388,9 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // STICKER BOX
-//-----------------------------------------------
+// -----------------------------------------------
 .is-sticker-box {
 	position: relative;
 
@@ -460,16 +460,16 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // TESTIMONIAL BOX
-//-----------------------------------------------
+// -----------------------------------------------
 .is-testimonial-box {
 	padding: 72px 48px;
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // MESSAGE BOX
-//-----------------------------------------------
+// -----------------------------------------------
 .message-box {
 	border: 2px solid transparent;
 	border-radius: var(--wp--custom--default-border-radius);

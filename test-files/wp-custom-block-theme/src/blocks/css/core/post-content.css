@@ -10,7 +10,7 @@
 	> :last-child:not(.alignfull) {
 		margin-block-end: calc(var(--wp--custom--element-spacing) * 4);
 
-		@media screen and (max-width: 48rem) {
+		@media screen and (width <= 48rem) {
 			margin-block-end: calc(var(--wp--custom--element-spacing) * 3);
 		}
 	}

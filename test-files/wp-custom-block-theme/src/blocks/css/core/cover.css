@@ -8,7 +8,7 @@
 			color: inherit;
 		}
 
-		@media screen and (max-width: calc( (768 / 16) * 1rem )) {
+		@media screen and (width <= calc( (768 / 16) * 1rem )) {
 			padding-block: calc(var(--wp--custom--element-spacing) * 3);
 		}
 	}
@@ -56,7 +56,7 @@
 			100vb - var(--site-header--height, 144px) - var(--wp-admin--admin-bar--height, 0px)
 		) !important;
 
-		@media (max-width: calc( (1139 / 16) * 1rem )) {
+		@media (width <= calc( (1139 / 16) * 1rem )) {
 			min-block-size: calc(
 				100vb - var(--site-header--height, 100px) - var(--wp-admin--admin-bar--height, 0px)
 			) !important;
@@ -68,7 +68,7 @@
 			100vb - var(--sticky-header--height, 0px) - var(--wp-admin--admin-bar--height, 0px)
 		) !important;
 
-		@media (max-width: 600px) {
+		@media (width <= 600px) {
 			min-block-size: 100vb !important;
 		}
 	}

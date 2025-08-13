@@ -15,23 +15,22 @@ html:focus-within {
 
 html {
 	// Scroll offset
-	@media screen and (min-width: calc( (1280 / 16) * 1rem)) {
+	@media screen and (width >= calc( (1280 / 16) * 1rem)) {
 		scroll-padding-block-start: calc(
 			var(--wp-admin--admin-bar--height, 0px) + var(--sticky-header--height, 144px) +
 				var(--wp--custom--element-spacing, 24px)
 		);
 	}
+
 	// Scroll offset when WP Admin Bar has a static position
-	@media screen and (max-width: 600px) {
+	@media screen and (width <= 600px) {
 		scroll-padding-block-start: 0;
 	}
 }
 
 :focus-visible {
-	outline-color: var(--wp--preset--color--secondary);
+	outline: var(--wp--preset--color--secondary) solid 2px;
 	outline-offset: 2px;
-	outline-style: solid;
-	outline-width: 2px;
 }
 
 body {
@@ -117,15 +116,14 @@ li:where(:not(.wp-block-navigation-item, .wp-block-social-link)) {
 
 ul,
 ol {
-	margin-block-start: var(--wp--custom--element-spacing);
-	margin-block-end: 0;
+	margin-block: var(--wp--custom--element-spacing) 0;
 	padding-inline-start: calc(var(--wp--custom--element-spacing) * 2);
 
 	li {
 		margin-block-start: calc(var(--wp--custom--element-spacing) / 2);
 	}
 
-	@media screen and (max-width: calc( (767 / 16) * 1rem)) {
+	@media screen and (width <= calc( (767 / 16) * 1rem)) {
 		padding-inline-start: calc(var(--wp--custom--element-spacing) * 1.5);
 	}
 }

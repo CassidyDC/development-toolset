@@ -2,9 +2,9 @@
  * VARIABLES
  */
 
-//-----------------------------------------------
+// -----------------------------------------------
 // VARIABLES: DEFAULTS
-//-----------------------------------------------
+// -----------------------------------------------
 body {
 	// BRAND BLUE HSL COLOR
 	// --h-primary: 236;
@@ -48,16 +48,17 @@ body {
 
 	// Gray filters
 	--filter-gray-dark: invert(0%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(20%) contrast(100%);
+
 	// --filter-gray-medium: invert(0%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(35%) contrast(100%);
 
 	--filter-primary-white: brightness(0) saturate(100%) invert(89%) sepia(2%) saturate(1771%) hue-rotate(198deg)
 		brightness(102%) contrast(89%);
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // VARIABLES: SITE PADDING ON MOBILE
-//-----------------------------------------------
-@media screen and (max-width: 767px) {
+// -----------------------------------------------
+@media screen and (width <= 767px) {
 	body {
 		--wp--custom--site-spacing: 24px;
 	}

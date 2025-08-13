@@ -3,8 +3,7 @@
  */
 
 .wp-block-columns:is(.sidebar-left-container) {
-	row-gap: calc(var(--wp--custom--element-spacing) * 3);
-	column-gap: var(--wp--custom--site-spacing);
+	gap: calc(var(--wp--custom--element-spacing) * 3) var(--wp--custom--site-spacing);
 	margin: calc(var(--wp--custom--element-spacing) * 4) auto;
 
 	.sidebar-wrap {
@@ -25,11 +24,11 @@
 		max-inline-size: 51.5rem;
 	}
 
-	@media screen and (min-width: calc( (1280 / 16) * 1rem)) {
+	@media screen and (width >= calc( (1280 / 16) * 1rem)) {
 		column-gap: calc(var(--wp--custom--site-spacing) * 1.5);
 	}
 
-	@media screen and (max-width: calc( (1320 / 16) * 1rem)) {
+	@media screen and (width <= calc( (1320 / 16) * 1rem)) {
 		.box:not(.is-sticker-box) {
 			.wp-block-buttons {
 				flex-direction: column;
@@ -43,7 +42,7 @@
 		}
 	}
 
-	@media screen and (max-width: calc( (960 / 16) * 1rem)) {
+	@media screen and (width <= calc( (960 / 16) * 1rem)) {
 		flex-direction: column-reverse;
 
 		.single-state & {
@@ -59,7 +58,7 @@
 		}
 	}
 
-	@media screen and (max-width: calc( (768 / 16) * 1rem)) {
+	@media screen and (width <= calc( (768 / 16) * 1rem)) {
 		margin: calc(var(--wp--custom--element-spacing) * 3) auto;
 
 		.wp-block-buttons {

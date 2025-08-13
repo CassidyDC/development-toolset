@@ -3,9 +3,9 @@
  * This file is only used by the WP editor and is NOT applied to the live frontend that visitors see.
  */
 
-//-----------------------------------------------
+// -----------------------------------------------
 // BLOCK EDITOR: POST TITLE
-//-----------------------------------------------
+// -----------------------------------------------
 .edit-post-visual-editor__post-title-wrapper {
 	border-block-end: 2px solid var(--wp--preset--color--gray-white);
 	margin: 0 !important;
@@ -20,9 +20,9 @@
 }
 
 .wp-block-cover {
-	//-----------------------------------------------
+	// -----------------------------------------------
 	// BLOCK EDITOR: SINGLE POST HERO
-	//-----------------------------------------------
+	// -----------------------------------------------
 	.wp-block-post-author__name {
 		margin-block-start: 0;
 	}
@@ -30,6 +30,7 @@
 	.wp-block-post-terms {
 		a {
 			color: var(--wp--preset--color--white);
+
 			// &:hover,
 			// &:focus {
 			//   text-decoration: none;
@@ -37,9 +38,9 @@
 		}
 	}
 
-	//-----------------------------------------------
+	// -----------------------------------------------
 	// BLOCK EDITOR: WP-BLOCK-HEADING IN COVER
-	//-----------------------------------------------
+	// -----------------------------------------------
 	.wp-block-cover {
 		.wp-block-heading:where(:not(.has-text-color)) {
 			color: inherit;
@@ -47,22 +48,22 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // BLOCK EDITOR: POST ARTICLE
-//-----------------------------------------------
+// -----------------------------------------------
 .wp-block-post-content {
 	article {
 		margin-block-start: calc(var(--wp--custom--element-spacing) * 3);
 
-		@media screen and (max-width: calc( (768 / 16) * 1rem )) {
+		@media screen and (width <= calc( (768 / 16) * 1rem )) {
 			margin-block-start: calc(var(--wp--custom--element-spacing) * 2);
 		}
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // WP-BLOCK-BUTTON: SIZES
-//-----------------------------------------------
+// -----------------------------------------------
 .wp-block-button {
 	&:where(.has-size-large) {
 		.wp-element-button {
@@ -86,9 +87,9 @@
 	}
 }
 
-//---------------------------------------------------
+// ---------------------------------------------------
 // BLOCK EDITOR: NOT-BTN (EXAMPLE: PRODUCTS PAGES)
-//---------------------------------------------------
+// ---------------------------------------------------
 .wp-block-button:is(.not-btn) {
 	.wp-element-button {
 		background-color: transparent;
@@ -96,9 +97,9 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // BLOCK EDITOR: ELEMENTS
-//-----------------------------------------------
+// -----------------------------------------------
 select {
 	max-inline-size: 100%;
 }
@@ -119,9 +120,9 @@ figure {
 	margin-block-start: 0;
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // WP-BLOCK-BUTTON: OUTLINE STYLE
-//-----------------------------------------------
+// -----------------------------------------------
 // The duplicate class is to override the theme.json dup output.
 // See: https://github.com/WordPress/gutenberg/issues/49835
 .wp-block-button.is-style-outline.is-style-outline {
@@ -146,18 +147,18 @@ figure {
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // WP SYNCED PATTERNS
-//-----------------------------------------------
+// -----------------------------------------------
 .block-library-block__reusable-block-container {
 	&.alignfull {
 		margin-block-start: 0;
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // PATTERN PREVIEWS
-//-----------------------------------------------
+// -----------------------------------------------
 .block-editor-block-preview__content-iframe {
 	.sidebar-left-container,
 	.grid {
@@ -165,9 +166,9 @@ figure {
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // TABLE OF CONTENTS BLOCK
-//-----------------------------------------------
+// -----------------------------------------------
 .wp-block-wp-custom-block-theme-table-of-contents {
 	inset-block-start: 0;
 }

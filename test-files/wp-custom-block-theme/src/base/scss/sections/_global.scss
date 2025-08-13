@@ -2,9 +2,9 @@
  * GLOBAL
  */
 
-//-----------------------------------------------
+// -----------------------------------------------
 // GLOBAL: DEFAULTS
-//-----------------------------------------------
+// -----------------------------------------------
 .alignfull + .alignfull,
 .alignfull + .has-background {
 	margin-block-start: 0;
@@ -22,7 +22,7 @@ section {
 				margin-block: 0;
 			}
 
-			@media screen and (max-width: calc( (768 / 16) * 1rem)) {
+			@media screen and (width <= calc( (768 / 16) * 1rem)) {
 				margin: calc(var(--wp--custom--element-spacing) * 3) auto;
 			}
 		}
@@ -32,7 +32,7 @@ section {
 		margin: 0 auto;
 		padding-block: calc(var(--wp--custom--element-spacing) * 4);
 
-		@media screen and (max-width: calc( (768 / 16) * 1rem)) {
+		@media screen and (width <= calc( (768 / 16) * 1rem)) {
 			padding-block: calc(var(--wp--custom--element-spacing) * 3);
 		}
 	}
@@ -46,7 +46,7 @@ section {
 			margin: calc(var(--wp--custom--element-spacing) * 4) auto;
 			padding: 0 var(--wp--custom--site-spacing);
 
-			@media screen and (max-width: calc( (768 / 16) * 1rem )) {
+			@media screen and (width <= calc( (768 / 16) * 1rem )) {
 				margin: calc(var(--wp--custom--element-spacing) * 3) auto;
 			}
 		}
@@ -55,7 +55,7 @@ section {
 	article {
 		margin-block-start: calc(var(--wp--custom--element-spacing) * 3);
 
-		@media screen and (max-width: calc( (768 / 16) * 1rem )) {
+		@media screen and (width <= calc( (768 / 16) * 1rem )) {
 			margin-block-start: calc(var(--wp--custom--element-spacing) * 2);
 		}
 	}

@@ -162,7 +162,7 @@ input[type="submit"],
 	}
 }
 
-@media (max-width: 1139px) {
+@media (width <= 1139px) {
 	.wp-block-navigation {
 		.has-child {
 			.wp-block-navigation__submenu-container {

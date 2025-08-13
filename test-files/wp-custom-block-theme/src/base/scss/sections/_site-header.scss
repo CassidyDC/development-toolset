@@ -2,9 +2,9 @@
  * SITE HEADER
  */
 
-//-----------------------------------------------
+// -----------------------------------------------
 //  STRUCTURE
-//-----------------------------------------------
+// -----------------------------------------------
 // .site-header
 //  .mobile-logo-container
 //    .header-logo
@@ -24,9 +24,9 @@
 //          .header-logins
 //        .header-primary-nav
 
-//-----------------------------------------------
+// -----------------------------------------------
 // HEADER: DEFAULTS
-//-----------------------------------------------
+// -----------------------------------------------
 .site-header {
 	box-shadow: 0 -4px 8px var(--wp--preset--color--gray-dark);
 	font-size: var(--wp--preset--font-size--small);
@@ -65,7 +65,7 @@
 	inline-size: 217px;
 }
 
-//--- HEADER SECONDARY NAV ---
+// --- HEADER SECONDARY NAV ---
 .wp-block-navigation {
 	.header-secondary-nav {
 		.wp-block-navigation-item {
@@ -86,11 +86,11 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // HEADER: DESKTOP ONLY (71.25rem or wider)
-//-----------------------------------------------
-@media screen and (min-width: calc( (1140 / 16) * 1rem)) {
-	//--- SITE HEADER ---
+// -----------------------------------------------
+@media screen and (width >= calc( (1140 / 16) * 1rem)) {
+	// --- SITE HEADER ---
 	.site-header {
 		// Sticky header on front-end but not in site editor
 		&:not(.block-editor-block-list__layout) {
@@ -106,7 +106,7 @@
 		}
 	}
 
-	//--- HEADER TOPBAR ---
+	// --- HEADER TOPBAR ---
 	.header-topbar {
 		background-color: var(--wp--preset--color--primary);
 
@@ -115,12 +115,12 @@
 		}
 	}
 
-	//--- HEADER INNER CONTAINER ---
+	// --- HEADER INNER CONTAINER ---
 	.header-container__inner {
 		gap: calc(var(--wp--custom--element-spacing) * 2);
 	}
 
-	//--- HEADER PRIMARY NAV ---
+	// --- HEADER PRIMARY NAV ---
 	.header-primary-nav {
 		.has-child {
 			.wp-block-navigation__submenu-container {
@@ -131,7 +131,7 @@
 		}
 	}
 
-	//--- HEADER SECONDARY NAV ---
+	// --- HEADER SECONDARY NAV ---
 	.wp-block-navigation {
 		.header-secondary-nav {
 			gap: 8px;
@@ -186,10 +186,10 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // HEADER: TABLETS (1139px or narrower in rem)
-//-----------------------------------------------
-@media screen and (max-width: calc( (1139.9 / 16) * 1rem)) {
+// -----------------------------------------------
+@media screen and (width <= calc( (1139.9 / 16) * 1rem)) {
 	#site-canvas {
 		position: relative;
 		block-size: 100%;
@@ -198,7 +198,7 @@
 		transition: 300ms ease transform;
 
 		&.active {
-			position: fixed; //stops page scrolling
+			position: fixed; // stops page scrolling
 		}
 	}
 
@@ -218,12 +218,12 @@
 	.site-header {
 		box-shadow: none;
 
-		//--- HEADER LOGO CONTAINER ---
+		// --- HEADER LOGO CONTAINER ---
 		.header-logo-container {
 			display: none;
 		}
 
-		//-- HEADER MENU CONTAINER ---
+		// -- HEADER MENU CONTAINER ---
 		.header-menu-container {
 			flex-direction: column-reverse;
 			gap: calc(var(--wp--custom--site-spacing));
@@ -247,10 +247,12 @@
 					margin-block-start: 0.25rem;
 				}
 			}
+
 			// Submenu
 			.wp-block-navigation-submenu {
 				flex-wrap: wrap;
 			}
+
 			// Submenu inner
 			.wp-block-navigation {
 				&:not(.has-background) {
@@ -276,6 +278,7 @@
 							color: var(--wp--preset--color--primary-white);
 						}
 					}
+
 					// Submenu toggle icon
 					&.open-on-click .wp-block-navigation-submenu__toggle + .wp-block-navigation__submenu-icon {
 						color: var(--wp--preset--color--primary-white);
@@ -332,7 +335,7 @@
 		padding-block: 16px;
 	}
 
-	//--- HEADER CONTAINER ---
+	// --- HEADER CONTAINER ---
 	.header-container {
 		position: absolute;
 		inset-block-start: 0;
@@ -344,7 +347,7 @@
 		inline-size: 30rem;
 	}
 
-	//--- HEADER TOPBAR ---
+	// --- HEADER TOPBAR ---
 	.header-topbar {
 		background: transparent;
 
@@ -358,13 +361,12 @@
 		}
 	}
 
-	//--- HEADER CONTAINER INNER ---
+	// --- HEADER CONTAINER INNER ---
 	.header-container__inner {
-		padding-block-start: 0;
-		padding-block-end: calc(var(--wp--custom--element-spacing) * 4);
+		padding-block: 0 calc(var(--wp--custom--element-spacing) * 4);
 	}
 
-	//--- MOBILE MENU BUTTON ---
+	// --- MOBILE MENU BUTTON ---
 	// Button to open Mobile Menu
 	.wp-block-button.header-menu-btn {
 		display: flex;
@@ -391,8 +393,7 @@
 		span {
 			position: absolute;
 			inset-block-start: 0;
-			inset-inline-start: 0;
-			inset-inline-end: 0;
+			inset-inline: 0;
 			display: block;
 			background-color: var(--wp--preset--color--primary);
 			block-size: 4px;
@@ -401,8 +402,7 @@
 			&::after {
 				content: "";
 				position: absolute;
-				inset-inline-start: 0;
-				inset-inline-end: 0;
+				inset-inline: 0;
 				display: block;
 				background-color: var(--wp--preset--color--primary);
 				block-size: 4px;
@@ -417,6 +417,7 @@
 			}
 		}
 	}
+
 	// Button to close Mobile Menu
 	.header-menu-btn.active {
 		span {
@@ -439,10 +440,10 @@
 	}
 }
 
-//-----------------------------------------------
+// -----------------------------------------------
 // HEADER: MOBILE (37.5rem or narrower)
-//-----------------------------------------------
-@media screen and (max-width: calc( (600 / 16) * 1rem)) {
+// -----------------------------------------------
+@media screen and (width <= calc( (600 / 16) * 1rem)) {
 	#site-wrapper.show-nav #site-canvas {
 		transform: translateX(-100%);
 	}
@@ -469,7 +470,7 @@
 // -----------------------------------------------
 // HEADER: TINY DEVICES (20rem or narrower)
 // -----------------------------------------------
-@media screen and (max-width: calc( (320 / 16) * 1rem)) {
+@media screen and (width <= calc( (320 / 16) * 1rem)) {
 	.wp-block-button.header-menu-btn {
 		.wp-block-button__link {
 			block-size: 24px;

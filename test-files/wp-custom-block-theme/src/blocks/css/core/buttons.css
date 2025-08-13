@@ -89,8 +89,7 @@
 			}
 
 			/* FILL-STYLE COLORS */
-			:where(.is-color-secondary, .is-color-white):not(.is-style-outline)
-				& {
+			:where(.is-color-secondary, .is-color-white):not(.is-style-outline) & {
 				&:hover,
 				&:focus {
 					background-color: var(--wp--preset--color--secondary-light);
@@ -131,11 +130,7 @@
 
 			/* OUTLINE-STYLE COLORS */
 			:where(
-					.is-style-outline:not([class*="is-color-"]):not(
-							.is-color-primary
-						)
-				)
-				& {
+					.is-style-outline:not([class*="is-color-"], .is-color-primary)) & {
 				border-color: var(--wp--preset--color--primary);
 				color: var(--wp--preset--color--primary);
 
@@ -150,8 +145,7 @@
 				}
 			}
 
-			.is-style-outline:not([class*="is-color-"]):not(.is-color-primary)
-				& {
+			.is-style-outline:not([class*="is-color-"], .is-color-primary) & {
 				background-color: red !important;
 			}
 
@@ -213,7 +207,7 @@
 		font-weight: 700;
 	}
 
-	@media screen and (max-width: 500px) {
+	@media screen and (width <= 500px) {
 		flex-basis: 100%;
 		text-align: center;
 	}

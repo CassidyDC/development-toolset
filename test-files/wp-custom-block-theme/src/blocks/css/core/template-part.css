@@ -22,7 +22,7 @@
 			.footer-states__inner {
 				gap: 0;
 
-				@media screen and (max-width: calc( (768 / 16) * 1rem)) {
+				@media screen and (width <= calc( (768 / 16) * 1rem)) {
 					flex-direction: column;
 					gap: calc(var(--wp--custom--element-spacing) * 2);
 				}
@@ -37,7 +37,7 @@
 				img {
 					padding-inline-end: calc(var(--wp--custom--element-spacing) * 3);
 
-					@media screen and (max-width: calc( (768 / 16) * 1rem)) {
+					@media screen and (width <= calc( (768 / 16) * 1rem)) {
 						padding: 0;
 					}
 				}
@@ -45,7 +45,7 @@
 
 			/* FOOTER: THINKING GREEN SECTION */
 			.footer-thinking-green__inner {
-				@media screen and (max-width: calc( (768 / 16) * 1rem)) {
+				@media screen and (width <= calc( (768 / 16) * 1rem)) {
 					flex-direction: column;
 					padding-block-start: calc(var(--wp--custom--element-spacing) * 3);
 				}
@@ -65,7 +65,7 @@
 					inline-size: auto;
 				}
 
-				@media screen and (max-width: calc( (768 / 16) * 1rem)) {
+				@media screen and (width <= calc( (768 / 16) * 1rem)) {
 					padding-block-start: var(--wp--custom--element-spacing);
 				}
 			}
@@ -96,11 +96,11 @@
 					text-wrap: balance;
 				}
 
-				@media screen and (max-width: calc( (1139.9 / 16) * 1rem)) {
+				@media screen and (width <= calc( (1139.9 / 16) * 1rem)) {
 					grid-template-columns: 1fr 1fr;
 				}
 
-				@media screen and (max-width: calc( (767.9 / 16) * 1rem)) {
+				@media screen and (width <= calc( (767.9 / 16) * 1rem)) {
 					grid-template-columns: 1fr;
 				}
 			}
@@ -120,7 +120,7 @@
 					margin-block-start: 0;
 				}
 
-				@media screen and (min-width: calc( (1200 / 16) * 1rem)) {
+				@media screen and (width >= calc( (1200 / 16) * 1rem)) {
 					> *:nth-child(1),
 					> *:nth-child(3) {
 						flex-basis: 25%;
@@ -132,7 +132,7 @@
 					}
 				}
 
-				@media screen and (max-width: calc( (960 / 16) * 1rem)) {
+				@media screen and (width <= calc( (960 / 16) * 1rem)) {
 					flex-direction: column;
 					padding-block: calc(var(--wp--custom--element-spacing) * 1.5);
 
@@ -154,7 +154,7 @@
 					}
 				}
 
-				@media screen and (max-width: calc( (500 / 16) * 1rem)) {
+				@media screen and (width <= calc( (500 / 16) * 1rem)) {
 					flex-direction: column;
 
 					p:not(.footer-copyright) {

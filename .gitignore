@@ -1,0 +1,8 @@
+# Ignore directories
+.dev-assets
+node_modules
+vendor
+
+# Ignore files
+composer.lock
+package-lock.json

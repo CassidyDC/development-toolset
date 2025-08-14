@@ -1,0 +1,13 @@
+parameters:
+  level: 6
+  paths:
+    - .
+  excludePaths:
+    analyse:
+      - .dev-assets (?)
+      - logs (?)
+      - node_modules (?)
+      - vendor (?)
+      - wordpress (?)
+  stubFiles:
+    - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php

@@ -3,7 +3,9 @@
 	"version": 3,
 	"title": "Subtitle",
 	"slug": "subtitle",
-	"blockTypes": [ "core/paragraph" ],
+	"blockTypes": [
+		"core/paragraph"
+	],
 	"styles": {
 		"css": "text-wrap:balance;",
 		"typography": {

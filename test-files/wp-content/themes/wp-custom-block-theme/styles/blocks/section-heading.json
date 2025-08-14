@@ -3,7 +3,9 @@
 	"version": 3,
 	"title": "Section Head",
 	"slug": "section-heading",
-	"blockTypes": [ "core/heading" ],
+	"blockTypes": [
+		"core/heading"
+	],
 	"styles": {
 		"css": "display:flex; align-items:center; flex-direction:column;"
 	}

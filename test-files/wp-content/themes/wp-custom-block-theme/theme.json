@@ -53,57 +53,90 @@
 			"defaultPalette": false,
 			"duotone": [
 				{
-					"colors": [ "hsl(236, 44%, 30%)", "hsl(236, 44%, 90%)" ],
+					"colors": [
+						"hsl(236, 44%, 30%)",
+						"hsl(236, 44%, 90%)"
+					],
 					"name": "Primary Default/White",
 					"slug": "primary"
 				},
 				{
-					"colors": [ "hsl(200, 74%, 48%)", "hsl(200, 74%, 93%)" ],
+					"colors": [
+						"hsl(200, 74%, 48%)",
+						"hsl(200, 74%, 93%)"
+					],
 					"name": "Secondary Default/White",
 					"slug": "secondary"
 				},
 				{
-					"colors": [ "hsl(98, 30%, 20%)", "hsl(98, 30%, 80%)" ],
+					"colors": [
+						"hsl(98, 30%, 20%)",
+						"hsl(98, 30%, 80%)"
+					],
 					"name": "Tertiary Default/White",
 					"slug": "tertiary"
 				},
 				{
-					"colors": [ "hsl(0, 0%, 35%)", "hsl(0, 0%, 95%)" ],
+					"colors": [
+						"hsl(0, 0%, 35%)",
+						"hsl(0, 0%, 95%)"
+					],
 					"name": "Gray Default/White",
 					"slug": "gray"
 				},
 				{
-					"colors": [ "hsl(0, 0%, 0%)", "hsl(0, 0%, 100%)" ],
+					"colors": [
+						"hsl(0, 0%, 0%)",
+						"hsl(0, 0%, 100%)"
+					],
 					"name": "Black and White",
 					"slug": "black-and-white"
 				},
 				{
-					"colors": [ "hsl(0, 0%, 100%)", "hsl(0, 0%, 100%)" ],
+					"colors": [
+						"hsl(0, 0%, 100%)",
+						"hsl(0, 0%, 100%)"
+					],
 					"name": "White Filter",
 					"slug": "white-filter"
 				},
 				{
-					"colors": [ "hsl(236, 44%, 30%)", "hsl(236, 44%, 30%)" ],
+					"colors": [
+						"hsl(236, 44%, 30%)",
+						"hsl(236, 44%, 30%)"
+					],
 					"name": "Primary Filter",
 					"slug": "primary-filter"
 				},
 				{
-					"colors": [ "hsl(236, 44%, 90%)", "hsl(236, 44%, 90%)" ],
+					"colors": [
+						"hsl(236, 44%, 90%)",
+						"hsl(236, 44%, 90%)"
+					],
 					"name": "Primary White Filter",
 					"slug": "primary-white-filter"
 				},
 				{
-					"colors": [ "hsl(200, 74%, 48%)", "hsl(200, 74%, 48%)" ],
+					"colors": [
+						"hsl(200, 74%, 48%)",
+						"hsl(200, 74%, 48%)"
+					],
 					"name": "Secondary Filter",
 					"slug": "secondary-filter"
 				},
 				{
-					"colors": [ "hsl(200, 74%, 93%)", "hsl(200, 74%, 93%)" ],
+					"colors": [
+						"hsl(200, 74%, 93%)",
+						"hsl(200, 74%, 93%)"
+					],
 					"name": "Secondary White Filter",
 					"slug": "secondary-white-filter"
 				},
 				{
-					"colors": [ "hsl(0, 0%, 20%)", "hsl(0, 0%, 20%)" ],
+					"colors": [
+						"hsl(0, 0%, 20%)",
+						"hsl(0, 0%, 20%)"
+					],
 					"name": "Gray Dark Filter",
 					"slug": "gray-dark-filter"
 				}
@@ -421,7 +454,13 @@
 					"slug": "120"
 				}
 			],
-			"units": [ "%", "px", "rem", "vh", "vw" ]
+			"units": [
+				"%",
+				"px",
+				"rem",
+				"vh",
+				"vw"
+			]
 		},
 		"typography": {
 			"customFontSize": true,
@@ -436,7 +475,9 @@
 							"fontFamily": "'Proxima Vara'",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": [ "file:./assets/fonts/proxima-vara.woff2" ]
+							"src": [
+								"file:./assets/fonts/proxima-vara.woff2"
+							]
 						}
 					],
 					"fontFamily": "'Proxima Vara', Arial, Helvetica, sans-serif",
@@ -783,22 +824,31 @@
 	"customTemplates": [
 		{
 			"name": "blank",
-			"postTypes": [ "page", "post" ],
+			"postTypes": [
+				"page",
+				"post"
+			],
 			"title": "Blank (No Header or Footer)"
 		},
 		{
 			"name": "single-city",
-			"postTypes": [ "city" ],
+			"postTypes": [
+				"city"
+			],
 			"title": "City Page"
 		},
 		{
 			"name": "single-state",
-			"postTypes": [ "state" ],
+			"postTypes": [
+				"state"
+			],
 			"title": "State Page"
 		},
 		{
 			"name": "single-testimonial",
-			"postTypes": [ "testimonial" ],
+			"postTypes": [
+				"testimonial"
+			],
 			"title": "Testimonial Page"
 		}
 	],

@@ -3,7 +3,9 @@
 	"version": 3,
 	"title": "Hero",
 	"slug": "hero",
-	"blockTypes": [ "core/cover" ],
+	"blockTypes": [
+		"core/cover"
+	],
 	"styles": {
 		"blocks": {
 			"core/paragraph": {

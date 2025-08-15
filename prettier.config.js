@@ -10,49 +10,28 @@
 
 'use strict';
 
-/**
- * External dependencies
- */
-import prettierPackage from 'prettier/package.json' with { type: 'json' };
-
-/**
- * Based on `@wordpress/prettier-config` package
- *
- * @typedef WPPrettierOptions
- * @property {boolean} [parenSpacing=true] Insert spaces inside parentheses.
- */
-const isWPPrettier = prettierPackage.name === 'wp-prettier';
-const customOptions = isWPPrettier ? { parenSpacing: true } : {};
-const customStyleOptions = isWPPrettier ? { parenSpacing: false } : {};
+import wpConfig from '@wordpress/prettier-config';
 
 const config = {
-	plugins: [ 'prettier-plugin-multiline-arrays' ],
+	...wpConfig,
+	plugins: [ 'prettier-plugin-multiline-arrays' ], // Keeps arrays formatted as is by default
 	overrides: [
+		...wpConfig.overrides,
 		{
 			files: '*.{css,sass,scss}',
 			options: {
 				printWidth: 600, // To not break long selector combinations
-				singleQuote: false,
-				...customStyleOptions,
 			},
 		},
 		{
-			files: [ '*.json', '*.jsonc' ],
+			files: '*.{json,jsonc}',
 			options: {
-				multilineArraysWrapThreshold: 0,
+				// Always put object properties and array items on a newline
+				printWidth: 1,
+				bracketSpacing: false,
 			},
 		},
 	],
-	arrowParens: 'always',
-	bracketSameLine: false,
-	bracketSpacing: true,
-	printWidth: 80,
-	semi: true,
-	singleQuote: true,
-	tabWidth: 4,
-	trailingComma: 'es5',
-	useTabs: true,
-	...customOptions,
 };
 
 export default config;

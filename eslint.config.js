@@ -12,8 +12,10 @@
 
 import globals from 'globals';
 import js from '@eslint/js';
-import wpPlugin from '@cassidydc/eslint-plugin-wordpress';
+import tseslint from 'typescript-eslint';
+import wordpress from '@cassidydc/eslint-plugin-wordpress';
 import { defineConfig, globalIgnores } from 'eslint/config';
+import { importX } from 'eslint-plugin-import-x';
 
 export default defineConfig( [
 	globalIgnores( [
@@ -24,28 +26,33 @@ export default defineConfig( [
 	] ),
 	{
 		plugins: {
+			'import-x': importX,
 			js,
-			wpPlugin,
+			tseslint,
+			wordpress,
 		},
 		extends: [
+			'import-x/recommended',
 			'js/recommended',
-			'wpPlugin/recommended',
+			'tseslint/recommended',
+			'wordpress/recommended',
 		],
 		files: [ '**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}' ],
 		languageOptions: {
 			globals: {
 				...globals.browser,
+				...globals.node,
+				// Splide: 'readonly',
 			},
 		},
 		linterOptions: {
 			reportUnusedInlineConfigs: 'warn',
 		},
 		rules: {
+			'@typescript-eslint/no-unused-vars': 'warn',
+			'no-console': 'warn',
 			'no-unused-vars': 'warn',
 			yoda: [ 'warn', 'never' ],
-		},
-		settings: {
-			'import/core-modules': [ 'eslint/config' ],
 		},
 	},
 ] );

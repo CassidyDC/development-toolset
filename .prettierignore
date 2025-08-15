@@ -23,5 +23,7 @@
 # YAML                    = # prettier-ignore
 
 # DIRECTORIES & FILES TO IGNORE
+**/build
 **/**.min.css
 **/**.min.js
+

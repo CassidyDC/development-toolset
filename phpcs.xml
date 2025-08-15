@@ -6,6 +6,7 @@
   <file>.</file>
 
   <!-- Exclude the following patterns from the check -->
+	<exclude-pattern>build/*</exclude-pattern>
   <exclude-pattern>node_modules/*</exclude-pattern>
 	<exclude-pattern>vendor/*</exclude-pattern>
 
@@ -27,6 +28,10 @@
 
     <!-- Don't use yoda conditions -->
     <exclude name="WordPress.PHP.YodaConditions" />
+
+		<!-- Allow Class files in CamelCase or Snake_Case -->
+    <!-- <exclude name="WordPress.Files.FileName.InvalidClassFileName" /> -->
+    <!-- <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" /> -->
   </rule>
 
     <!-- Enforce short array syntax -->

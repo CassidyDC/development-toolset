@@ -1,28 +1,24 @@
 {
+	"[php]": {
+		"editor.defaultFormatter": "valeryanm.vscode-phpsab",
+		"editor.tabSize": 4
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": "explicit"
+	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
 	"editor.insertSpaces": false,
 	"editor.tabSize": 2,
-	// "html.format.wrapAttributes": "auto",
-	// "html.format.wrapLineLength": 0,
+	"eslint.useFlatConfig": true,
 	"phpsab.standard": "WordPress",
-	"stylelint.reportDescriptionlessDisables": true,
-	"stylelint.reportNeedlessDisables": true,
-	"stylelint.reportInvalidScopeDisables": true,
 	"prettier.configPath": "prettier.config.js",
-	"editor.codeActionsOnSave": {
-		"source.fixAll.stylelint": "explicit"
+	"search.exclude": {
+		"**.min.css": true,
+		"**.min.js": true,
+		"build/**": true
 	},
-	// "[html]": {
-	// 	"editor.defaultFormatter": "vscode.html-language-features"
-	// },
-	"[php]": {
-		"editor.defaultFormatter": "valeryanm.vscode-phpsab",
-		"editor.tabSize": 4
-	}
-	// "search.exclude": {
-	// 	"**.min.css": true,
-	// 	"**.min.js": true,
-	// 	"build/**": true
-	// }
+	"stylelint.reportDescriptionlessDisables": true,
+	"stylelint.reportInvalidScopeDisables": true,
+	"stylelint.reportNeedlessDisables": true
 }

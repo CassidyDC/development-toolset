@@ -10,12 +10,12 @@
 		"stylelint",
 		"wordpress"
 	],
-	"homepage": "https://github.com/CassidyDC/dev-toolset/blob/main/README.md",
 	"author": {
 		"name": "Jacob Cassidy",
 		"email": "jacob@cassidydc.com",
 		"url": "https://cassidydc.com"
 	},
+	"homepage": "https://github.com/CassidyDC/dev-toolset/blob/main/README.md",
 	"license": "MIT",
 	"type": "module",
 	"repository": {
@@ -26,12 +26,16 @@
 		"url": "https://github.com/CassidyDC/dev-toolset/issues"
 	},
 	"devDependencies": {
-		"@cassidydc/eslint-plugin-wordpress": "^1.1.2",
-		"@cassidydc/stylelint-config-w3c-order": "^1.2.1",
+		"@cassidydc/eslint-plugin-wordpress": "^1.2.2",
+		"@cassidydc/stylelint-config-w3c-order": "^1.2.2",
 		"@eslint/js": "^9.33.0",
 		"@stylistic/stylelint-config": "^3.0.1",
 		"@wordpress/prettier-config": "^4.28.0",
+		"@wordpress/scripts": "^30.21.0",
+		"copy-webpack-plugin": "^13.0.1",
 		"eslint": "^9.33.0",
+		"eslint-plugin-import-x": "^4.16.1",
+		"glob": "^11.0.3",
 		"globals": "^16.3.0",
 		"markdownlint-cli2": "^0.18.1",
 		"prettier": "npm:wp-prettier@^3.0.3",
@@ -42,21 +46,29 @@
 		"stylelint-declaration-block-no-ignored-properties": "^2.8.0",
 		"stylelint-high-performance-animation": "^1.11.0",
 		"stylelint-no-indistinguishable-colors": "^2.3.1",
-		"stylelint-order": "^7.0.0"
+		"stylelint-order": "^7.0.0",
+		"stylelint-plugin-logical-css": "^1.2.3",
+		"stylelint-use-nesting": "^6.0.0",
+		"typescript-eslint": "^8.39.1"
 	},
 	"overrides": {
 		"@wordpress/babel-preset-default": {
-			"@babel/runtime": "^7.28.2"
+			"@babel/runtime": "^7.28.3"
+		},
+		"@wordpress/scripts": {
+			"@babel/runtime": "^7.28.3",
+			"webpack-dev-server": "^5.2.1"
 		}
 	},
 	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
 		"check": "npx prettier . --check",
 		"format": "npx prettier . --write",
 		"lint:docs": "npx markdownlint-cli2 \"**/*.md\"",
 		"lint:docs:fix": "npx markdownlint-cli2 \"**/*.md\" --fix",
 		"lint:scripts": "npx eslint",
 		"lint:scripts:fix": "npx eslint --fix",
-		"lint:styles": "npx stylelint \"**/*.{css,scss}\"",
-		"lint:styles:fix": "npx stylelint \"**/*.{css,scss}\" --fix"
+		"lint:styles": "npx stylelint \"**/*.{css,scss}\""
 	}
 }

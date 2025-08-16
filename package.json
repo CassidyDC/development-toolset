@@ -37,6 +37,7 @@
 		"eslint-plugin-import-x": "^4.16.1",
 		"glob": "^11.0.3",
 		"globals": "^16.3.0",
+		"lefthook": "^1.12.3",
 		"markdownlint-cli2": "^0.18.1",
 		"prettier": "npm:wp-prettier@^3.0.3",
 		"prettier-plugin-multiline-arrays": "^4.0.3",
@@ -61,14 +62,16 @@
 		}
 	},
 	"scripts": {
-		"build": "wp-scripts build",
 		"start": "wp-scripts start",
+		"build": "wp-scripts build",
 		"check": "npx prettier . --check",
 		"format": "npx prettier . --write",
+		"hook:install": "npx lefthook install",
 		"lint:docs": "npx markdownlint-cli2 \"**/*.md\"",
 		"lint:docs:fix": "npx markdownlint-cli2 \"**/*.md\" --fix",
 		"lint:scripts": "npx eslint",
 		"lint:scripts:fix": "npx eslint --fix",
-		"lint:styles": "npx stylelint \"**/*.{css,scss}\""
+		"lint:styles": "npx stylelint \"**/*.{css,scss}\"",
+		"lint:styles:fix": "npx stylelint \"**/*.{css,scss}\" --fix"
 	}
 }

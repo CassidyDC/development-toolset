@@ -18,17 +18,23 @@ const config = {
 	overrides: [
 		...wpConfig.overrides,
 		{
-			files: '*.{css,sass,scss}',
+			files: '*.{css,less,sass,scss}',
 			options: {
 				printWidth: 600, // To not break long selector combinations
 			},
 		},
 		{
-			files: '*.{json,jsonc}',
+			files: '*.{json,jsonc,json5}',
 			options: {
 				// Always put object properties and array items on a newline
 				printWidth: 1,
 				bracketSpacing: false,
+			},
+		},
+		{
+			files: '*.{yaml,yml}',
+			options: {
+				tabWidth: 2,
 			},
 		},
 	],

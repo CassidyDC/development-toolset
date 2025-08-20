@@ -22,8 +22,16 @@
 # CSS                     = /* prettier-ignore */
 # YAML                    = # prettier-ignore
 
-# DIRECTORIES & FILES TO IGNORE
+# IGNORE BUILD FILES
 **/build
+
+# IGNORE LOCK FILES
+**/composer.lock
+**/package-lock.json
+
+# IGNORE MINIFIED FILES
 **/**.min.css
 **/**.min.js
 
+# IGNORE THIRD-PARTY FILES
+**/vendor

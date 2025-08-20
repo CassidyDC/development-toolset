@@ -31,40 +31,19 @@ export default {
 		'@stylistic/block-opening-brace-newline-after': 'always',
 		'@stylistic/block-opening-brace-space-before': 'always',
 		'@stylistic/declaration-block-semicolon-newline-after': 'always',
-		'@stylistic/declaration-colon-newline-after': null,
 		'@stylistic/function-comma-space-after': 'always-single-line',
 		'@stylistic/function-max-empty-lines': 1,
-		'@stylistic/indentation': [ 'tab', { ignore: [ 'inside-parens' ] } ],
+		'@stylistic/indentation': [
+			'tab',
+			{
+				ignore: [
+					'inside-parens',
+				],
+			},
+		],
 		'@stylistic/max-empty-lines': 2,
-		'@stylistic/max-line-length': null,
-		'@stylistic/media-feature-parentheses-space-inside': null,
-
-		// 'at-rule-empty-line-before': [
-		// 	'always',
-		// 	{
-		// 		except: [
-		// 			'blockless-after-same-name-blockless',
-		// 			'first-nested',
-		// 		],
-		// 		ignore: [ 'after-comment' ],
-		// 	},
-		// ],
-		// 'comment-empty-line-before': [
-		// 	'always',
-		// 	{
-		// 		except: [ 'first-nested' ],
-		// 		ignore: [ 'stylelint-commands' ],
-		// 		ignoreComments: [ 'prettier-ignore' ],
-		// 	},
-		// ],
-		// 'rule-empty-line-before': [
-		// 	'always',
-		// 	{
-		// 		except: [ 'first-nested', 'after-single-line-comment' ],
-		// 	},
-		// ],
-
 		'color-named': 'never',
+		'csstools/use-nesting': 'always',
 		'custom-property-pattern': [
 			'^([a-z][a-z0-9]*)(--?[a-z0-9]+)*$',
 			{
@@ -80,18 +59,12 @@ export default {
 		'no-descending-specificity': [
 			true,
 			{
-				ignore: [ 'selectors-within-list' ],
+				ignore: [
+					'selectors-within-list',
+				],
 			},
 		],
 		'number-max-precision': 5,
-		'selector-class-pattern': [
-			'^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$',
-			{
-				message: 'Expected BEM naming convention for class selector.',
-			},
-		],
-
-		'csstools/use-nesting': 'always',
 		'plugin/declaration-block-no-ignored-properties': true,
 		'plugin/no-low-performance-animation-properties': [
 			true,
@@ -121,9 +94,38 @@ export default {
 				severity: 'warning',
 			},
 		],
-
-		'scss/operator-no-newline-after': null,
 		'scss/selector-no-redundant-nesting-selector': true,
+		'selector-class-pattern': [
+			'^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$',
+			{
+				message: 'Expected BEM naming convention for class selector.',
+			},
+		],
+
+		// TEST RULES
+		// 'at-rule-empty-line-before': [
+		// 	'always',
+		// 	{
+		// 		except: [
+		// 			'blockless-after-same-name-blockless',
+		// 			'first-nested',
+		// 		],
+		// 		ignore: [ 'after-comment' ],
+		// 	},
+		// ],
+
+		// 'rule-empty-line-before': [
+		// 	'always',
+		// 	{
+		// 		except: [ 'first-nested', 'after-single-line-comment' ],
+		// 	},
+		// ],
+
+		// TURN OFF RULES
+		'@stylistic/declaration-colon-newline-after': null,
+		'@stylistic/max-line-length': null,
+		'comment-empty-line-before': null,
+		'scss/operator-no-newline-after': null,
 	},
 	reportDescriptionlessDisables: true,
 	reportInvalidScopeDisables: true,

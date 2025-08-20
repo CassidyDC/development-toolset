@@ -1,6 +1,6 @@
 {
 	"name": "cassidydc/dev-toolset",
-	"description": "CassidyDC's default PHP code formatting, linting, and static analysis development toolset",
+	"description": "CassidyDC default PHP code formatting, linting, and static analysis development toolset",
 	"version": "1.0.0",
 	"keywords": [
 		"formatter",

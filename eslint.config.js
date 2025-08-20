@@ -15,15 +15,15 @@ import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import wordpress from '@cassidydc/eslint-plugin-wordpress';
 import { defineConfig, globalIgnores } from 'eslint/config';
+import { fileURLToPath } from 'node:url';
 import { importX } from 'eslint-plugin-import-x';
+import { includeIgnoreFile } from '@eslint/compat';
+
+const gitignorePath = fileURLToPath( new URL( '.gitignore', import.meta.url ) );
 
 export default defineConfig( [
-	globalIgnores( [
-		'**/.dev-assets/',
-		'**/build/',
-		'**/vendor/',
-		'**/*.min.js',
-	] ),
+	globalIgnores( [ '**/*.min.js' ] ),
+	includeIgnoreFile( gitignorePath, 'Imported .gitignore patterns' ),
 	{
 		plugins: {
 			'import-x': importX,

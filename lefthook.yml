@@ -16,7 +16,7 @@ pre-commit:
     markdownlint:
       priority: 3
       glob: '*.md'
-      run: npx markdownlint {staged_files} --fix
+      run: npx markdownlint-cli2 {staged_files} --fix
       stage_fixed: true
     prettier:
       priority: 4

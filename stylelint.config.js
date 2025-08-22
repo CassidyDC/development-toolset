@@ -42,6 +42,7 @@ export default {
 			},
 		],
 		'@stylistic/max-empty-lines': 2,
+		'alpha-value-notation': 'number',
 		'color-named': 'never',
 		'csstools/use-nesting': 'always',
 		'custom-property-pattern': [
@@ -52,6 +53,15 @@ export default {
 			},
 		],
 		'declaration-property-value-keyword-no-deprecated': true,
+		'font-family-no-missing-generic-family-keyword': [
+			true,
+			{
+				ignoreFontFamilies: [
+					'dashicons',
+					'FontAwesome',
+				],
+			},
+		],
 		'function-url-quotes': 'never',
 		// Uncomment the following line to turn OFF `no-descending-specificity` (when using CSS nesting, since it doesn't play well with nesting)...
 		// 'no-descending-specificity': null,

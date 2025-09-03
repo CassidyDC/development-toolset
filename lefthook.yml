@@ -1,4 +1,4 @@
-colors: false # Removes ANSI escape codes from run script output, but not starting/ending output for vscode output panel.
+colors: false # Removes ANSI escape codes from run output, but not starting/ending output
 
 pre-commit:
   parallel: false
@@ -35,17 +35,17 @@ pre-commit:
     parallellint:
       priority: 5
       glob: '*.php'
-      run: vendor/bin/parallel-lint {staged_files} --show-deprecated
+      run: ./vendor/bin/parallel-lint {staged_files} --show-deprecated --no-colors --no-progress
     phpcbf:
       priority: 6
       glob: '*.php'
-      run: ./vendor/bin/phpcbf {staged_files}
+      run: ./vendor/bin/phpcbf {staged_files} --no-colors -q
       stage_fixed: true
     phpcs:
       priority: 7
       glob: '*.php'
-      run: ./vendor/bin/phpcs {staged_files}
+      run: ./vendor/bin/phpcs {staged_files} --no-colors -q
     phpstan:
       priority: 8
       glob: '*.php'
-      run: ./vendor/bin/phpstan analyse {staged_files} --memory-limit=2G
+      run: ./vendor/bin/phpstan analyse {staged_files} --memory-limit=2G --no-progress --error-format=table

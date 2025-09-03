@@ -24,15 +24,13 @@ export default {
 		'stylelint-plugin-logical-css',
 		'stylelint-use-nesting',
 	],
-	ignoreFiles: [ '**/*.min.css', 'build/**', 'vendor/**' ],
+	ignoreFiles: [ '**/*.min.css', '**/build/**', '**/vendor/**' ],
 	rules: {
 		'@stylistic/at-rule-name-space-after': 'always',
 		'@stylistic/block-closing-brace-newline-before': 'always',
 		'@stylistic/block-opening-brace-newline-after': 'always',
 		'@stylistic/block-opening-brace-space-before': 'always',
 		'@stylistic/declaration-block-semicolon-newline-after': 'always',
-		'@stylistic/function-comma-space-after': 'always-single-line',
-		'@stylistic/function-max-empty-lines': 1,
 		'@stylistic/indentation': [
 			'tab',
 			{
@@ -41,7 +39,6 @@ export default {
 				],
 			},
 		],
-		'@stylistic/max-empty-lines': 2,
 		'alpha-value-notation': 'number',
 		'color-named': 'never',
 		'csstools/use-nesting': 'always',
@@ -62,7 +59,8 @@ export default {
 				],
 			},
 		],
-		'function-url-quotes': 'never',
+		'font-weight-notation': 'numeric',
+		'function-linear-gradient-no-nonstandard-direction': true,
 		// Uncomment the following line to turn OFF `no-descending-specificity` (when using CSS nesting, since it doesn't play well with nesting)...
 		// 'no-descending-specificity': null,
 		// Uncomment the following lines to turn ON `no-descending-specificity` (when NOT using CSS nesting)...
@@ -112,29 +110,9 @@ export default {
 			},
 		],
 
-		// TEST RULES
-		// 'at-rule-empty-line-before': [
-		// 	'always',
-		// 	{
-		// 		except: [
-		// 			'blockless-after-same-name-blockless',
-		// 			'first-nested',
-		// 		],
-		// 		ignore: [ 'after-comment' ],
-		// 	},
-		// ],
-
-		// 'rule-empty-line-before': [
-		// 	'always',
-		// 	{
-		// 		except: [ 'first-nested', 'after-single-line-comment' ],
-		// 	},
-		// ],
-
 		// TURN OFF RULES
 		'@stylistic/declaration-colon-newline-after': null,
 		'@stylistic/max-line-length': null,
-		'comment-empty-line-before': null,
 		'scss/operator-no-newline-after': null,
 	},
 	reportDescriptionlessDisables: true,

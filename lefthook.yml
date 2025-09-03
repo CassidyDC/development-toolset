@@ -1,4 +1,4 @@
-colors: false # Removes ANSI escape codes from run output, but not starting/ending output
+colors: false # Removes ANSI escape codes from run script output, but not starting/ending output for vscode output panel.
 
 pre-commit:
   parallel: false
@@ -48,4 +48,4 @@ pre-commit:
     phpstan:
       priority: 8
       glob: '*.php'
-      run: ./vendor/bin/phpstan analyse --no-progress --error-format=table --memory-limit=2G
+      run: ./vendor/bin/phpstan analyse {staged_files} --memory-limit=2G

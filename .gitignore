@@ -1,34 +1,17 @@
-# Ignore WordPress Core
-/wordpress
-
-# Ignore dev directories
-.dev-assets
-ddev-wp-setup-script
-logs
+# IGNORE DEV ASSETS AND NODE MODULES
 node_modules
-vendor
 
-# Ignore dev files
-composer.lock
-package-lock.json
-wp-config-ddev.php
-wp-config.php
-
-# Ignore local-specific directories and files
-.ddev
-index.php
-ray.php
-wp-cli.yml
-
-# Ignore all wp-content files by default, but allow themes and plugins to be added below
-wp-content/*
-!wp-content/plugins/
-wp-content/plugins/*
-!wp-content/themes/
-wp-content/themes/*
-
-# Don't ignore the following plugins
-# !wp-content/plugins/plugin-name
-
-# Don't ignore the following themes
-# !wp-content/themes/theme-name
+/.dev-assets
+/.vscode
+/composer.json
+/phpcs.xml
+/phpstan.neon
+/package.json
+/.editorconfig
+/.markdownlint-cli2.jsonc
+/.prettierignore
+/eslint.config.js
+/lefthook.yml
+/package-lock.json
+/prettier.config.js
+/stylelint.config.js

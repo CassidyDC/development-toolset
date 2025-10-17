@@ -1,0 +1,36 @@
+{
+	"name": "@cassidydc/development-toolset",
+	"version": "1.0.0-theme-build",
+	"description": "CassidyDC build script for WordPress themes",
+	"keywords": [
+		"build",
+		"script",
+		"plugin",
+		"wordpress"
+	],
+	"author": {
+		"name": "Jacob Cassidy",
+		"email": "jacob@cassidydc.com",
+		"url": "https://cassidydc.com"
+	},
+	"homepage": "https://github.com/CassidyDC/development-toolset/blob/main/README.md",
+	"license": "MIT",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/CassidyDC/development-toolset"
+	},
+	"bugs": {
+		"url": "https://github.com/CassidyDC/development-toolset/issues"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.26.0",
+		"copy-webpack-plugin": "^13.0.1",
+		"fast-glob": "^3.3.3",
+		"webpack-remove-empty-scripts": "^1.1.1"
+	},
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start"
+	}
+}

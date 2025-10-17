@@ -32,3 +32,7 @@ And add the following settings in the `package.json` file:
   "build": "wp-scripts build",
 }
 ```
+
+-   Root
+-   Theme
+-   Plugin

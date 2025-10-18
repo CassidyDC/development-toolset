@@ -8,13 +8,13 @@ logs
 node_modules
 vendor
 
-# Ignore dev files
+# Ignore specific dev files
 composer.lock
 package-lock.json
 wp-config-ddev.php
 wp-config.php
 
-# Ignore local-specific directories and files
+# Ignore local-specific dev directories and files
 .ddev
 index.php
 ray.php

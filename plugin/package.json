@@ -28,6 +28,12 @@
 		"copy-webpack-plugin": "^13.0.1",
 		"fast-glob": "^3.3.3"
 	},
+	"overrides": {
+		"@wordpress/scripts": {
+			"@babel/runtime": "^7.28.3",
+			"webpack-dev-server": "^5.2.2"
+		}
+	},
 	"scripts": {
 		"build": "wp-scripts build",
 		"start": "wp-scripts start"

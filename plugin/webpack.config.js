@@ -7,7 +7,6 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 // Utilities.
 import path from 'path';
 import fastGlob from 'fast-glob';
-
 const globSync = fastGlob.sync;
 
 // Directories.

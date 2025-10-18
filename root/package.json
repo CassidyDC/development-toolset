@@ -1,5 +1,5 @@
 {
-	"name": "@cassidydc/dev-toolset",
+	"name": "@cassidydc/development-toolset",
 	"version": "1.0.0",
 	"description": "CassidyDC WordPress code formatting and linting development toolset",
 	"keywords": [
@@ -15,15 +15,15 @@
 		"email": "jacob@cassidydc.com",
 		"url": "https://cassidydc.com"
 	},
-	"homepage": "https://github.com/CassidyDC/dev-toolset/blob/main/README.md",
+	"homepage": "https://github.com/CassidyDC/development-toolset/blob/main/README.md",
 	"license": "MIT",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/CassidyDC/dev-toolset"
+		"url": "https://github.com/CassidyDC/development-toolset"
 	},
 	"bugs": {
-		"url": "https://github.com/CassidyDC/dev-toolset/issues"
+		"url": "https://github.com/CassidyDC/development-toolset/issues"
 	},
 	"devDependencies": {
 		"@cassidydc/eslint-plugin-wordpress": "^1.2.2",

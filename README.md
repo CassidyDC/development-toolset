@@ -1,6 +1,24 @@
 # CassidyDC Development Toolset
 
-CassidyDC default code formatting and linting toolset for WordPress development.
+CassidyDC default code formatting, linting, and build toolset for WordPress development.
+
+## Overview
+
+There are 3 directories included for various setups:
+
+### Root
+
+This directory contains the development config files that should be use in your project's root workspace. This can be the local server root directory, the theme directory, or the plugin directory, depending on what you set as your workspace root.
+
+If you are using a plugin or theme directory as your root workspace, the plugin or theme `package.json` **devDependencies** and **scripts** should be added to the root `package.json` file you add in your workspace.
+
+### Plugin
+
+When you are using your local server as your workspace root and have a plugin nested inside that workspace, you should add these plugin config files in your nested plugin directory.
+
+### Theme
+
+Same as for 'Plugin' above. The difference is the theme `package.json` and `webpack.config.js` contain an additional package called `webpack-remove-empty-scripts` that removes empty JS files created by the WordPress build script when used for themes.
 
 ## Optional Stylelint Plugins
 
@@ -11,28 +29,3 @@ CassidyDC default code formatting and linting toolset for WordPress development.
 | `stylelint-no-indistinguishable-color`              | Enforce use of colors that are not too close to each other (with threshold setting).                                                                          |
 | `stylelint-plugin-logical-css`                      | Enforce the use of logical CSS properties, values, and units.                                                                                                 |
 | `stylelint-use-nesting`                             | Enforces CSS nesting when possible.                                                                                                                           |
-
-## Optional WordPress Build Script
-
-To use the official WordPress build script for Block Plugins/Themes, run the following command:
-
-`npm i --save-dev @wordpress/scripts copy-webpack-plugin glob`
-
-And add the following settings in the `package.json` file:
-
-```json
-"overrides": {
-  "@wordpress/scripts": {
-    "@babel/runtime": "^7.28.3",
-    "webpack-dev-server": "^5.2.2"
-  }
-},
-"scripts": {
-  "start": "wp-scripts start",
-  "build": "wp-scripts build",
-}
-```
-
--   Root
--   Theme
--   Plugin

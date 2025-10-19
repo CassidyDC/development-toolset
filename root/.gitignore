@@ -3,7 +3,7 @@
 
 # Ignore dev directories
 .dev-assets
-ddev-wp-setup-script
+ddev-local-wordpress-script
 logs
 node_modules
 vendor

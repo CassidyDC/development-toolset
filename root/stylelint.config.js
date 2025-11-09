@@ -45,8 +45,7 @@ export default {
 		'custom-property-pattern': [
 			'^([a-z][a-z0-9]*)(--?[a-z0-9]+)*$',
 			{
-				message:
-					'Expected custom property name to be kebab-case (double dashes are allowed)',
+				message: 'Expected custom property name to be kebab-case (double dashes are allowed)',
 			},
 		],
 		'declaration-property-value-keyword-no-deprecated': true,

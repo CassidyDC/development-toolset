@@ -62,13 +62,9 @@ export default {
 			...( minFiles.length > 0
 				? [
 						new CopyWebpackPlugin( {
-							patterns: globSync(
-								`${ sourceDir }/**/*.min.js`
-							).map( ( filePath ) => ( {
+							patterns: globSync( `${ sourceDir }/**/*.min.js` ).map( ( filePath ) => ( {
 								from: filePath,
-								to: path.join(
-									path.relative( sourceDir, filePath )
-								),
+								to: path.join( path.relative( sourceDir, filePath ) ),
 								info: { minimized: true }, // Copies without running through Terser minimization
 							} ) ),
 						} ),

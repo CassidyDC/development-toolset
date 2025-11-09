@@ -50,6 +50,7 @@ export default defineConfig( [
 			'@typescript-eslint/no-unused-vars': 'warn',
 			'no-console': 'warn',
 			'no-unused-vars': 'warn',
+			'prettier/prettier': [ 'warn', { printWidth: 120 } ],
 			yoda: [ 'warn', 'never' ],
 		},
 	},

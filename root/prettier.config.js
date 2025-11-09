@@ -14,6 +14,7 @@ import wpConfig from '@wordpress/prettier-config';
 
 const config = {
 	...wpConfig,
+	printWidth: 120,
 	plugins: [ 'prettier-plugin-multiline-arrays' ], // Keeps arrays formatted as is by default
 	overrides: [
 		...wpConfig.overrides,

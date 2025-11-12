@@ -1,34 +1,51 @@
+# Created by https://cassidydc.com/development-tools
+
 # Ignore WordPress Core
+/wp-admin/
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Ignore Root's WordPress Core directory
 /wordpress
 
-# Ignore dev directories
+# Ignore local dev directories
+.ddev
 .dev-assets
 ddev-local-wordpress-script
-logs
 node_modules
 vendor
 
-# Ignore specific dev files
+# Ignore local dev config files
 composer.lock
 package-lock.json
 wp-config-ddev.php
 wp-config.php
-
-# Ignore local-specific dev directories and files
-.ddev
-index.php
 ray.php
 wp-cli.yml
 
+# Ignore logs
+logs
+*.log
+
 # Ignore all wp-content files by default, but allow themes and plugins to be added below
 wp-content/*
+
+# Ignore WordPress plugins, unless whitelisted below
 !wp-content/plugins/
 wp-content/plugins/*
-!wp-content/themes/
-wp-content/themes/*
-
-# Don't ignore the following plugins
+# Plugins Whitelist:
 # !wp-content/plugins/plugin-name
 
-# Don't ignore the following themes
+# Ignore WordPress themes, unless whitelisted below
+!wp-content/themes/
+wp-content/themes/*
+# Themes Whitelist:
 # !wp-content/themes/theme-name

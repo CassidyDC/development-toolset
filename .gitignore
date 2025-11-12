@@ -1,6 +1,5 @@
 # IGNORE DEV ASSETS AND NODE MODULES
 node_modules
-
 /.dev-assets
 /.vscode
 /composer.json

@@ -44,6 +44,6 @@
 		"analyse": "vendor/bin/phpstan analyse --memory-limit=2G || true",
 		"format": "vendor/bin/phpcbf",
 		"lint": "vendor/bin/phpcs",
-		"syntax": "vendor/bin/parallel-lint --exclude vendor --show-deprecated ."
+		"syntax": "vendor/bin/parallel-lint --exclude vendor --show-deprecated wp-content/theme/your-theme"
 	}
 }

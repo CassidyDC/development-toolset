@@ -4,7 +4,7 @@
   <description>CassidyDC coding standards for WordPress projects.</description>
 
   <!-- Directories and files to check -->
-  <file>.</file>
+  <file>wp-content/theme/your-theme</file>
 
   <!-- Exclude the following patterns from the check -->
   <exclude-pattern>build/*</exclude-pattern>

@@ -53,5 +53,15 @@ export default defineConfig( [
 			'prettier/prettier': [ 'warn', { printWidth: 120 } ],
 			yoda: [ 'warn', 'never' ],
 		},
+		settings: {
+			jsdoc: {
+				tagNamePreference: {
+					return: 'return',
+					returns: 'returns',
+					yield: 'yield',
+					yields: 'yields',
+				},
+			},
+		},
 	},
 ] );

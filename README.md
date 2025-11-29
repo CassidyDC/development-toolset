@@ -12,6 +12,13 @@ This directory contains the development config files that should be use in your 
 
 If you are using a plugin or theme directory as your root workspace, the plugin or theme `package.json` **devDependencies** and **scripts** should be added to the root `package.json` file you add in your workspace.
 
+> [!NOTE]
+> You need to update the path to your theme and/or plugins to replace `wp-content/theme/your-theme` in the following files:
+>
+> 1. `composer.json`
+> 2. `phpcs.xml`
+> 3. `phpstan.neon`
+
 ### Plugin
 
 When you are using your local server as your workspace root and have a plugin nested inside that workspace, you should add these plugin config files in your nested plugin directory.
